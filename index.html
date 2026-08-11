@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aaron Pimentels' Portfolio</title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "mediaqueries.css">
+    </head>
+    <body>
+        <script src="script.js"></script> <!--start json script-->
+        <header id="top">
+            <nav id="desktop-nav"> <!--top nav bar-->
+            <div class="logo">Aaron Pimentel</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            </nav><!--end top nav bar-->
+
+            <nav id="hamburger-nav"> <!--hamburger nav-->
+                <div class="logo">Aaron Pimentel</div>
+                <div class="hamburger-menu">
+                    <div class="hamburger-icon" onclick="toggleMenu()">   
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu-links">
+                        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                        <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+                        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                    </div>
+                </div>
+            </nav> <!--end hamburger nav-->
+        </header>
+
+        <section id="profile"> <!--profile section-->
+            <div class="section__pic-container">
+                <img src="./assets/profilepic.png" alt="aaron pimentel profile picture">
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 class="title">Aaron Pimentel</h1>
+                <p class="section__text__p2">An Undergraduate at Western Governors University working 
+                    towards my degree in Cybersecurity and Information Assurance, with a passion in SOC and Threat Hunting</p>
+                <div class="btn-container"> <!-- include resume here --> <!--also project button here-->
+                    <button class="btn btn-color-2" onclick="window.open('./assets')">View Resume</button>
+                    <button class="btn btn-color-1" onclick="location.href='./#projects'"> Projects</button>
+                </div>
+                <div id="socials-container">
+                    <img 
+                        src="./assets/linkedinlogo.png" 
+                        alt="my linkedin profile" 
+                        class="icon" 
+                        onclick="location.href='https://www.linkedin.com/in/aaron-pimentel-2a1765421?utm_source=share_via&utm_content=profile&utm_medium=member_ios'"
+                    />
+                    <img 
+                        src="./assets/githublogo.png" 
+                        alt="my github profile" 
+                        class="icon" 
+                        onclick="location.href='https://github.com/abrad27'"
+                    />
+                </div>    
+            </div>
+        </section> <!--end profile section-->
+
+        <section id="about"> <!--about section-->
+            <p class="section__text__p1">Get to Know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img 
+                        src="./assets/aboutme.png" 
+                        alt="profile picture" 
+                        class="about-pic"
+                    />
+                </div>        
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <img 
+                                src="./assets/experience.png" 
+                                alt="experience icon" 
+                                class="icon"
+                            />
+                            <h3>Experience</h3>
+                            <p>1 year <br> Student IT Level 1: <br> Lab Monitor</p>
+                        </div>
+                        <div class="details-container">
+                            <img 
+                                src="./assets/education.png" 
+                                alt="education icon" 
+                                class="icon"
+                            />
+                            <h3>Education</h3>
+                            <p>B.S. Cybersecurity and Information Assurance (Western Governors University, Mar 2025 - Present)
+                                <br> 
+                                <br> B.S Electrical Engineering (University of Nevada Las Vegas, Jan 2023- Dec 2024 Transferred)
+                                <br>
+                                <br> High School Diploma (Sierra Vista High School, Aug 2018- May 2022)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>
+                            My interest in technology began with building computers and learning how each component worked together to create a functional system. 
+                            That curiosity eventually evolved into a passion for understanding how those systems are secured, defended, and protected against cyber 
+                            threats. What started with building computers has grown into a commitment to defending them.
+                            <br>
+                            <br>
+                            I'm currently pursuing a Bachelor's degree in Cybersecurity and Information Assurance at Western Governors 
+                            University, where I'm developing the knowledge and technical skills needed for a career in Security Operations 
+                            (SOC), threat hunting, and Blue Team operations.
+                            <br>
+                            <br>
+                            Beyond my coursework, I actively develop practical cybersecurity skills with projects built around my
+                            virtual enterprise simulation environment. My environment includes Active Directory with simulated workstations, pfSense, Security Onion, 
+                            Splunk, Kali Linux, Nessus, OpenVAS, and MITRE Caldera, allowing me to simulate real-world 
+                            enterprise environments, perform vulnerability assessments, monitor security events, and practice 
+                            incident detection and response.
+                            <br>
+                            <br>
+                            I enjoy taking on projects that challenge me to solve real security problems and strengthen my 
+                            understanding of enterprise infrastructure. Every project in this portfolio reflects my 
+                            commitment to continuous learning and my desire to grow into a well-rounded cybersecurity 
+                            professional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img 
+                src="./assets/arrow.png" 
+                alt="Arrow icon" 
+                class="icon arrow" 
+                onclick="location.href='./#projects'"
+            />
+        </section> <!--end about section-->
+
+        <section id="projects"> <!--projects section-->
+            <P class="section__text__p1">Browse My</P>
+            <h1 class="title">Projects</h1>
+            <div class="projects-container"> <!--individual containers start-->
+                <div class="projects-card"> <!--for more porjects copy the project card not container-->
+                    <div class="article-container">
+                        <img 
+                            src="./assets/project1.png" 
+                            alt="Project 1"
+                            class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Stellaris Tech Simulation Environment</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='./assets/Stellaris Tech Simulation Environment.pdf'">Go To Project</button>
+                    </div>
+                </div> <!--for more porjects copy end of projects card-->
+            </div><!--end individual project container-->
+            <img 
+                src="./assets/arrow.png" 
+                alt="Arrow icon" 
+                class="icon arrow" 
+                onclick="location.href='./#certifications'"
+            />
+        </section><!--end projects section-->
+
+        <section id="certifications">
+            <p class="section__text__p1">Browse My</p>
+            <h1 class="title">Certifications</h1>
+            <div class="certifications-container">
+                
+                <!--Security+-->
+                
+                <!-- Certification Card --> 
+                <div class="certification-card">
+                    <div class="article-container">
+                        <img
+                            src="./assets/comptia-security-ce-certification.png"
+                            alt="CompTIA Sec+"
+                            class="certification-img"
+                        />
+                    </div>
+                    <h2 class="certification-title">CompTIA Security+</h2>
+                    <p class="certification-description">
+                       Vendor-neutral certification validating core cybersecurity skills, including threat detection, 
+                       risk management, identity and access management, network security, incident response, 
+                       and security operations.
+                    </p>
+                    <div class="btn-container">
+                    <!--<button class="btn btn-color-2" onclick="window.open('./assets/comptia-a-plus.pdf')"> View Certificate</button>-->
+                        <button class="btn btn-color-1" onclick="location.href='https://www.credly.com/users/aaron-bradley-pimentel'">View Badge</button>
+                    </div>
+                </div>
+                <!-- Copy this card for more certifications -->
+
+                <!--Net+-->
+
+                <div class="certification-card">
+                    <div class="article-container">
+                        <img
+                            src="./assets/comptia-network-ce-certification.1.png"
+                            alt="CompTIA Net+"
+                            class="certification-img"
+                        />
+                    </div>
+                    <h2 class="certification-title">CompTIA Network+</h2>
+                    <p class="certification-description">
+                        Vendor-neutral certification demonstrating foundational knowledge of networking concepts, 
+                        infrastructure, routing and switching, network security, troubleshooting, and enterprise 
+                        network administration.
+                    </p>
+                    <div class="btn-container">
+                    <!--<button class="btn btn-color-2" onclick="window.open('./assets/comptia-a-plus.pdf')"> View Certificate</button>-->
+                        <button class="btn btn-color-1" onclick="location.href='https://www.credly.com/users/aaron-bradley-pimentel'">View Badge</button>
+                    </div>
+                </div>
+
+                <!--A+-->
+
+                <div class="certification-card">
+                    <div class="article-container">
+                        <img
+                            src="./assets/comptia-a-ce-certification.1.png"
+                            alt="CompTIA A+"
+                            class="certification-img"
+                        />
+                    </div>
+                    <h2 class="certification-title">CompTIA A+</h2>
+                    <p class="certification-description">
+                        Vendor-neutral certification covering computer hardware,
+                        operating systems, networking, troubleshooting, and security.
+                    </p>
+                    <div class="btn-container">
+                    <!--<button class="btn btn-color-2" onclick="window.open('./assets/comptia-a-plus.pdf')"> View Certificate</button>-->
+                        <button class="btn btn-color-1" onclick="location.href='https://www.credly.com/users/aaron-bradley-pimentel'">View Badge</button>
+                    </div>
+                </div>
+
+                <!--CIOS-->
+
+                <div class="certification-card">
+                    <div class="article-container">
+                        <img
+                            src="./assets/comptia-it-operations-specialist-cios-stackable-certification.png"
+                            alt="CompTIA CIOS"
+                            class="certification-img"
+                        />
+                    </div>
+                    <h2 class="certification-title">CompTIA IT Operations Specialist - Stackable Certification</h2>
+                    <p class="certification-description">
+                        Stackable certification recognizing proficiency in IT operations through demonstrated knowledge 
+                        of computer hardware, operating systems, networking, troubleshooting, and technical support best 
+                        practices.
+                    </p>
+                    <div class="btn-container">
+                    <!--<button class="btn btn-color-2" onclick="window.open('./assets/comptia-a-plus.pdf')"> View Certificate</button>-->
+                        <button class="btn btn-color-1" onclick="location.href='https://www.credly.com/users/aaron-bradley-pimentel'">View Badge</button>
+                    </div>
+                </div>
+
+                <!--CSIS-->
+
+                <div class="certification-card">
+                    <div class="article-container">
+                        <img
+                            src="./assets/comptia-secure-infrastructure-specialist-csis-stackable-certification.png"
+                            alt="CompTIA CSIS"
+                            class="certification-img"
+                        />
+                    </div>
+                    <h2 class="certification-title">CompTIA Secure Infrastructure Specialist - Stackable Certification</h2>
+                    <p class="certification-description">
+                        Stackable certification validating the ability to deploy, manage, and secure enterprise infrastructure by combining 
+                        networking fundamentals with essential cybersecurity principles and best practices.
+                    </p>
+                    <div class="btn-container">
+                    <!--<button class="btn btn-color-2" onclick="window.open('./assets/comptia-a-plus.pdf')"> View Certificate</button>-->
+                        <button class="btn btn-color-1" onclick="location.href='https://www.credly.com/users/aaron-bradley-pimentel'">View Badge</button>
+                    </div>
+                </div>
+
+                <!--ITIL-->
+
+                <div class="certification-card">
+                    <div class="article-container">
+                        <img
+                            src="./assets/ITIL.png"
+                            alt="ITIL 4"
+                            class="certification-img"
+                        />
+                    </div>
+                    <h2 class="certification-title">ITIL 4 - IT Service Management</h2>
+                    <p class="certification-description">
+                        Certification demonstrating an understanding of IT service management (ITSM), including the ITIL framework, 
+                        service lifecycle, continual improvement, value delivery, and modern IT service management practices.
+                    </p>
+                    <div class="btn-container">
+                    <!--<button class="btn btn-color-2" onclick="window.open('./assets/comptia-a-plus.pdf')"> View Certificate</button>-->
+                        <button class="btn btn-color-1" onclick="location.href='https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJHfn7KZuTb7fpttnfBj1BU'">View Badge</button>
+                    </div>
+                </div>
+            <!--end of certs-->
+            </div>
+            <img 
+                src="./assets/arrow.png" 
+                alt="Arrow icon" 
+                class="icon arrow" 
+                onclick="location.href='./#contact'"
+            />
+        </section>
+
+        <section id="contact"> <!--start contact section-->
+            <p class="section__text__p1">Get In Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img 
+                        src="./assets/email.png"
+                        alt="linkedin icon"
+                        class="icon contact-icon email-icon"
+                    />
+                    <p><a href="mailto:aaronbr.pimentel27@gmail.com">aaronbr.pimentel27@gmail.com</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img 
+                        src="./assets/linkedinlogo.png"
+                        alt="email icon"
+                        class="icon contact-icon"
+                    />
+                    <p><a href="https://www.linkedin.com/in/aaron-pimentel-2a1765421?utm_source=share_via&utm_content=profile&utm_medium=member_ios'">LinkedIn</a></p>
+                </div>
+            </div>
+        </section> <!--end contact section-->
+
+        <footer> <!--start footer-->
+            <nav>
+                <div class="nav-links-container">
+                     <ul class="nav-links">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2026 Aaron Pimentel. All Rights Reserved.</p>
+        </footer> <!--end footer-->
+
+        <script src="script.js"></script> <!--end json script-->
+    </body>
+</html>
